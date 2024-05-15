@@ -1,6 +1,6 @@
 ---
 - hosts: sbc
-  become: yes
+  become: false
   tasks:
     - name: Ping my hosts
       ansible.builtin.ping:
