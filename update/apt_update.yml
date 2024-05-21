@@ -1,9 +1,10 @@
 - hosts: sbc
-
+  debugger: on_skipped
   become: yes
   tasks:
     # Upgrade packages
     - name: upgrade apt packages
+      debugger: on_failed
       become: true
       apt:
         upgrade: yes
